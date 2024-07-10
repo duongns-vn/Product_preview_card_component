@@ -1,0 +1,152 @@
+/* Global Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"');
+
+:root {
+    --primary: #3D8168;
+    --bg: #F3EAE3;
+    --title: #20232A;
+    --text: #82828A;
+    --white: #fff;
+}
+
+
+.font_body {
+    font-family: "Montserrat";
+}
+
+.font_title {
+    font-family: "Fraunces";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Body and box style */
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: var(--white);
+    transition: all 0.3s;
+}
+
+
+/* Product image */
+.product_img {
+   
+    img {
+        height: 100%;
+        max-width: 300px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 10px 0px 0px 10px;
+    }
+}
+
+
+/* Product content style */
+
+.product_content {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .taxonomy {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 5.16px;
+        color: var(--text);
+    }
+
+    .product_title {
+        line-height: 32px;
+        color: var(--title);
+    }
+
+    .product_desc {
+        line-height: 150%;
+        color: var(--text);
+        font-size: 14px;
+    }    
+}
+
+
+/* Product Price style */
+.product_price {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+
+    .product_sales_price {
+        color: var(--primary);
+    }
+    .product_regular_price {
+        color: var(--text);
+        text-decoration: line-through;
+        font-size: 14px;
+    }
+}
+
+
+/* Button Style */
+.add_to_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px;
+    width: 100%;
+    color: var(--white);
+    font-weight: 700;
+    background-color: var(--primary);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #1A4031;
+    }
+}
+
+/* Mobile Style */
+@media (max-width: 767px) {
+    #main {
+        flex-direction: column;
+        max-width: 345px;
+    }
+    .product_content {
+        height: 100%;
+        gap: 18px;
+    }
+    .product_img {        
+        img {
+            max-width: 100%;
+            width: 100%;
+            max-height: 240px;
+            border-radius: 10px 10px 0px 0px;
+        }
+    }
+
+}
+
+
+/* Author */
+.attribution {
+    position: absolute;
+    bottom: 0;
+}
